@@ -1,0 +1,11 @@
+.icon {
+  &__symbol {
+    fill: none;
+    transition: $transition;
+  }
+
+  &__color-element {
+    fill: inherit;
+    stroke: inherit;
+  }
+}
