@@ -14,8 +14,8 @@ body {
   min-width: $sm-width;
   @include text;
   @include mp();
-  color: $black;
-  background-color: $light;
+  color: $text-color;
+  background-color: $bg-color;
 }
 
 img {
@@ -34,5 +34,9 @@ img {
   border: 0;
   white-space: nowrap;
   clip-path: inset(100%);
+}
+
+main {
+  @include container;
 }
 

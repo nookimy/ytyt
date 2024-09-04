@@ -4,15 +4,14 @@ $lg-width: 1024px;
 $mobile-width-only: 1199.98px;
 $xl-width: 1200px;
 $xxl-width: 1440px;
-$dark: #000000;
-$light: #ffffff;
-$maize: #FEC846;
-$urobilin: #ecb226;
-$deep-saffron: #FF9933;
-$blueberry: #467CFE;
-$black: #2E2E2E;
-$gray: #5C5C5C;
-$dark-gray: #C8C8C8;
-$normal-gray: #d8d8d8;
-$light-gray: #F1F1F1;
+
+$white: #fff;
+$black: #000;
+$light: #F9F8FD;
+$dark: #22253B;
+$accent-orange: #F15525;
+$accent-blue: #38BFF2;
+
+$bg-color: $light;
+$text-color: $dark;
 $transition: 0.4s;
