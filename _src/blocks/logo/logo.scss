@@ -2,10 +2,35 @@ a.logo {
     color: inherit;
     text-decoration: none;
     
+    &:hover,
+    &:focus {
+        & .icon {
+            &__el {
+                &--one {
+                    fill: $black;
+                    
+                }
+                &--two {
+                    fill: $accent-orange;
+                }
+                &--three {
+                    fill: $black;
+                }
+                &--four {
+                    fill: $accent-blue;
+                    
+                }
+            }
+        }
+    }
 }
 
 .logo {
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
 
     & .icon {
         width: 4rem;
@@ -16,8 +41,22 @@ a.logo {
             height: 1.946rem;
         }
 
-        &__symbol {
-            fill: unset;
+        &__el {
+            transition: $transition;
+            &--one {
+                fill: $accent-blue;
+            }
+            &--two {
+                fill: $black;
+            }
+            &--three {
+                fill: $accent-orange;
+            }
+            &--four {
+                fill: $black;
+            }
         }
+
+
     }
 }
