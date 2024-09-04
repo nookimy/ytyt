@@ -1,0 +1,23 @@
+a.logo {
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+.logo {
+    display: inline-flex;
+
+    & .icon {
+        width: 4rem;
+        height: 1.469rem;
+
+        @media (min-width: $lg-width) {
+            width: 5.3rem;
+            height: 1.946rem;
+        }
+
+        &__symbol {
+            fill: unset;
+        }
+    }
+}

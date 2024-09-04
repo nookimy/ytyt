@@ -541,7 +541,7 @@ function watch() {
   gulp.watch(paths.scripts.src, scripts)
   gulp.watch(paths.images.src, imgopt, svgopt)
   //gulp.watch(paths.imagesOpt.src, img, copySvg)
-  gulp.watch(paths.svgicons.watch, svgSprive)
+  //gulp.watch(paths.svgicons.watch, svgSprive)
 }
 
 // Таски для ручного запуска с помощью gulp clean, gulp html и т.д.
@@ -570,7 +570,7 @@ const img = gulp.series(imgresponsive, imgwebp);
 const mainTasks = gulp.parallel(stylesScss, scripts, img);
 
 // Построение сценариев выполнения задач
-const dev = gulp.series(clean, copyFonts, svgopt, svgSprive, copy, html, mainTasks, watch);
+const dev = gulp.series(clean, copyFonts, svgopt, copy, html, mainTasks, watch);
 
 // Таск, который выполняется по команде gulp
 exports.default = dev;
@@ -580,3 +580,6 @@ exports.fonts = fonts;
 
 // Таск, который выполняется по команде gulp fonts
 exports.img = img;
+
+// Таск, который выполняется по команде gulp fonts
+exports.svgSprive = svgSprive;
