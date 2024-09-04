@@ -1,0 +1,121 @@
+.btn--reset {
+    @include btn-reset;
+}
+
+.btn {
+    /* button */
+    appearance: none;
+    font: inherit;        
+    cursor: pointer;
+
+    /* link */
+    text-decoration: none;
+    text-align: center;
+
+    /* общие */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    min-width: 5em;
+    min-height: 3.88em;
+    border: 1px solid;
+    border-color: transparent;
+    border-radius: 4.55em;
+    @include button-text;
+    padding: 1.4em; 
+    color: inherit; 
+    transition: 0.3s ease;   
+    
+    &:disabled,
+    &[disabled],
+    &.disabled{
+        background-color: $gray;
+        border-color: $gray;
+        color: $white;        
+        cursor: not-allowed;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    & .icon {
+        display: inline-block;
+        vertical-align: middle; 
+        order: 1;       
+    }
+
+
+    &--main,
+    &--main-icon {
+        background-color: $accent-orange;
+        border-color: $accent-orange;
+        color: $white;
+
+        & .icon {       
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+
+        & .icon__symbol {
+            fill: $white;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $accent-blue;
+            border-color: $accent-blue;
+        }      
+    }
+
+    &--main-icon {
+        min-width: 4.4em;
+        text-align: center;
+        padding: 0;
+    }
+
+    &--login,
+    &--registration {
+        @include button-login-text;
+        min-height: 1em;
+        padding: 0.6em 1.2em;
+        gap: 0.213em;
+    }
+
+    &--login {        
+        background-color: $accent-blue;
+        border-color: $accent-blue;
+        color: $white;
+        
+
+        & .icon {       
+            width: 0.858rem;
+            height: 0.787rem;
+            transition: 0.3s ease;
+            order: -1;
+        }
+
+        & .icon__symbol {
+            stroke: $white;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $accent-orange;
+            border-color: $accent-orange;
+        }      
+    }
+
+    &--registration {
+        background-color: transparent;
+        border-color: transparent;
+        color: $dark;
+
+        &:hover,
+        &:focus {
+            color: $accent-orange;
+        }  
+    }
+    
+}
