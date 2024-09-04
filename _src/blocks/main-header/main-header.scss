@@ -1,0 +1,35 @@
+.main-header {
+    @include container;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.4rem;        
+        margin-top: 1rem;
+        height: 4rem;
+        border-radius: 7.5rem;
+        background-color: $white;
+
+        @media (min-width: $lg-width) {
+            min-height: 5rem;
+            padding: 1rem 1rem 1rem 2.1rem;
+            height: auto;
+            min-height: 4rem;
+            column-gap: 7.3rem;
+        }
+    }
+
+    &__nav {
+        display: none;
+        @media (min-width: $lg-width) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+        } 
+
+        & .site-nav {
+            flex-grow: 1;
+        }
+    }
+}

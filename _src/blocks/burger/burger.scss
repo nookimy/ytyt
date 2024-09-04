@@ -1,0 +1,14 @@
+.burger {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    @include btn-reset;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid;
+
+    @media (min-width: $lg-width) {
+        display: none;
+    }
+}
