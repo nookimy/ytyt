@@ -1,0 +1,66 @@
+.social {
+    &__title {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        margin: -1px;
+        padding: 0;
+        width: 1px;
+        height: 1px;
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+    }
+
+    &__list {
+        @include list;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+    }
+
+    &__item {
+        & > a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background-color: $dark;
+            transition: background-color 0.3s ease;
+
+            &:hover,
+            &:focus {
+                outline: none;
+                background-color: $accent-orange;
+            }
+
+            & .icon {
+
+                & .icon__symbol {
+                    fill: $white;
+                }
+                &--instagram {
+                    width: 1.9rem;
+                    height: 1.9rem;
+                }
+
+                &--vk {
+                    width: 2rem;
+                    height: 1.1rem;
+                }
+
+                &--facebook {
+                    width: 0.9rem;
+                    height: 1.7rem;
+                }
+
+                &--youtube {
+                    width: 2.1rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
+}

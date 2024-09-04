@@ -9,18 +9,3 @@
     stroke: inherit;
   }
 }
-
-.icon {
-  &__logo-el.one {
-    fill: $accent-blue;
-  }
-  &__logo-el.two {
-    fill: $black;
-  }
-  &__logo-el.three {
-    fill: $accent-orange;
-  }
-  &__logo-el.four {
-    fill: $black;
-  }
-}
